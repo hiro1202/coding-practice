@@ -11,6 +11,7 @@ contests/abc464/a/
 
 ```bash
 python3 contests/abc464/a/abc464_a.py < contests/abc464/a/tests/sample_1.txt
-uv run pytest                     # 全問題
-uv run pytest contests/abc464/a   # 特定の問題
+./run_samples.sh contests/abc464/a   # tests/ のサンプルを一括実行
+uv run pytest                        # 全問題
+uv run pytest contests/abc464/a      # 特定の問題
 ```
