@@ -9,5 +9,3 @@ dev = ["pytest>=8"]
 
 [tool.pytest.ini_options]
 testpaths = ["contests"]
-# 各問題に同名の test_main.py を置けるようにする
-addopts = "--import-mode=importlib"
