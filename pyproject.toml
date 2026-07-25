@@ -5,7 +5,11 @@ description = "コーディング練習用リポジトリ"
 requires-python = ">=3.12"
 
 [dependency-groups]
-dev = ["pytest>=8"]
+dev = [
+    "pytest>=8",
+    "pytest-html>=4.2.0",
+]
 
 [tool.pytest.ini_options]
 testpaths = ["contests"]
+addopts = "--html=report.html --self-contained-html"
