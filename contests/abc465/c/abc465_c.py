@@ -5,12 +5,15 @@
 N = int(input())
 S = input()
 
+# A=(1,2,…,N) を作成
 A = []
 
 for n in range(1, N + 1):
     A.append(n)
 
-for s in S:
+# 並べ替え
+for i, s in enumerate(S):
     if s == "o":
-        # 反転する
-        print(A)
+        A = A[0:i + 1][::-1] + A[i + 1:]
+
+print(A)
