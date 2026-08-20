@@ -7,22 +7,21 @@ S = input()
 
 ans = 0
 
-for i, s in enumerate(S):
-    if s == "G":
-        continue
+for i in range(M):
+    # G を探す範囲を定める
+    # 0 以上、M - 1 以下にすることでインデックスエラーを回避
+    left = max(0, i - D)
+    right = min(M - 1, i + D)
 
-    flg = True
+    watched = False
 
-    # ±D の範囲内に G があれば False
-    for j in range(-D, D + 1):
-        # インデックスエラーを回避
-        if i + j < 0 or i + j >= M:
-            continue
+    # ±D の範囲内に G があれば True
+    for j in range(left, right + 1):
+        if S[j] == "G":
+            watched = True
+            break
 
-        if S[i + j] == "G":
-            flg = False
-
-    if flg == True:
+    if not watched:
         ans += 1
 
 print(ans)
