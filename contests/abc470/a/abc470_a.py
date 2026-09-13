@@ -1,0 +1,6 @@
+# A - Fizz
+# URL: https://atcoder.jp/contests/abc470/tasks/abc470_a
+# 実行: python3 contests/abc470/a/abc470_a.py < contests/abc470/a/tests/sample_1.txt
+# 解答日: 2026.9.
+# 結果:
+# 実行時間:
